@@ -1,7 +1,7 @@
 
 ; this must be invoked before any instructions and there must not be a format directive
 ; ti84pceg.inc must be included
-macro flash_executable? name, temp_location_4b:ti.cursorImage, temp_location_3b:ti.scrapMem, temp_location_9b:ti.cursorImage+4
+macro flash_executable? temp_location_4b:ti.cursorImage, temp_location_3b:ti.scrapMem, temp_location_9b:ti.cursorImage+4
     local programexecbase, __handle_offset_instruction
     local _data, _header, _end, _start, _cleanup_code, _ram_code
     element programexecbase

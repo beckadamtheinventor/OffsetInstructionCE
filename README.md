@@ -12,7 +12,7 @@ include "ti84pceg.inc"
 include "tiformat.inc"
 include "offset_instructions.inc"
 
-flash_executable "DEMO"
+flash_executable
     ; your code here
 end flash_executable
 
