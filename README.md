@@ -9,7 +9,6 @@ Allow assembly programs to run directly in flash!
 ```
 include "ez80.inc"
 include "ti84pceg.inc"
-include "tiformat.inc"
 include "offset_instructions.inc"
 
 flash_executable

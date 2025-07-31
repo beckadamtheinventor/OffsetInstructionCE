@@ -52,14 +52,15 @@ macro flash_executable? temp_location_4b:ti.cursorImage, temp_location_3b:ti.scr
         pop de
         ; put a jump to the ram code at the temp location, which can now be called by the program
         call temp_location_4b
-        ld bc,_cleanup_code - $
         push hl
         ld hl,temp_location_4b
+.idk_what_to_call_this_label:
         ld (hl),$C3
         inc hl
         ld (hl),de
         pop hl
-        add hl,bc
+        ld de,_cleanup_code - .idk_what_to_call_this_label
+        add hl,de
         push hl ; return to cleanup routine
         ; jump past the storage for the ram code and cleanup code
         jr _ram_code.end

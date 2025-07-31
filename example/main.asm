@@ -1,9 +1,8 @@
 include "../include/ez80.inc"
 include "../include/ti84pceg.inc"
-include "../include/tiformat.inc"
 include "../include/offset_instructions.inc"
 
-flash_executable "DEMO"
+flash_executable
 
     call ti.RunIndicOff
     call ti.HomeUp
